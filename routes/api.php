@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BarangController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,9 +19,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/barang', [BarangController::class, 'index']);
+Route::get('/barang/{id}', [BarangController::class, 'show']);
+Route::post('/barang', [BarangController::class, 'create']);
+Route::put('/barang/{id}', [BarangController::class, 'update']);
+Route::delete('/barang/{id}', [BarangController::class, 'delete']);
 
-Route::get('/pegawai', 'App\Http\Controllers\PegawaiController@index');
-Route::post('/pegawai', 'App\Http\Controllers\PegawaiController@create');
-Route::post('/pegawai/{id}', 'App\Http\Controllers\PegawaiController@update');
-Route::delete('/pegawai/{id}', 'App\Http\Controllers\PegawaiController@delete');
-Route::get('/pegawai/{id?}', 'App\Http\Controllers\PegawaiController@show');
+
+
+// Route::get('/pegawai/{id?}', 'App\Http\Controllers\PegawaiController@show');
+// Route::post('/pegawai/{id}', 'App\Http\Controllers\PegawaiController@update');
+// Route::delete('/pegawai/{id}', 'App\Http\Controllers\PegawaiController@delete');

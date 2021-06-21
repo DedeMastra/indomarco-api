@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BarangController;
+use App\Http\Controllers\viewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/testing', function () {
+    return view('tampilApiBarang');
+});
+
+Route::get('/testingtesttest', [viewController::Class, 'test']);
+Route::get('/testingtestexample', [viewController::Class, 'example']);
+// Route::get('/testingtestexo', [viewController::Class, 'get_data_from_api']);
