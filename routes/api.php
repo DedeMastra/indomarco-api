@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\PemesananController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,18 @@ Route::get('/barang/{id}', [BarangController::class, 'show']);
 Route::post('/barang', [BarangController::class, 'create']);
 Route::put('/barang/{id}', [BarangController::class, 'update']);
 Route::delete('/barang/{id}', [BarangController::class, 'delete']);
+
+Route::get('/supplier', [SupplierController::class, 'index']);
+Route::get('/supplier/{id}', [SupplierController::class, 'show']);
+Route::post('/supplier', [SupplierController::class, 'create']);
+Route::put('/supplier/{id}', [SupplierController::class, 'update']);
+Route::delete('/supplier/{id}', [SupplierController::class, 'delete']);
+
+Route::get('/pemesanan', [PemesananController::class, 'index']);
+Route::get('/pemesanan/{id}', [PemesananController::class, 'show']);
+Route::post('/pemesanan', [PemesananController::class, 'create']);
+Route::put('/pemesanan/{id}', [PemesananController::class, 'update']);
+Route::delete('/pemesanan/{id}', [PemesananController::class, 'delete']);
 
 
 
