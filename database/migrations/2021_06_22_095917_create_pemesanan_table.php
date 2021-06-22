@@ -14,7 +14,7 @@ class CreatePemesananTable extends Migration
     public function up()
     {
         Schema::create('pemesanans', function (Blueprint $table) {
-            $table->increments('id');
+            $table->increments('pemesanan_id');
             $table->integer('kode_barang');
             $table->integer('kode_supplier');
             $table->foreign('kode_barang')->references('id')->on('barangs');
