@@ -17,7 +17,7 @@ class PemesananController extends Controller
         // echo Barang::all();
         // echo Supplier::all();
         // echo Pemesanan::where('Barang', 'Barang.id')->get();
-        echo Pemesanan::has('Barang.id')->get();
+        echo Pemesanan::has('barangs.id')->get();
 
         return Pemesanan::with('Barang', 'Supplier')->get();
     }
