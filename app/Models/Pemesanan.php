@@ -17,4 +17,14 @@ class Pemesanan extends Model
         'tanggal_pemesanan',
         'jumlah_pemesanan'
     ];
+
+    public function Supplier()
+    {
+        return $this->belongsTo('App\Models\Supplier');
+    }
+
+    public function Barang()
+    {
+        return $this->belongsTo('App\Models\Barang');
+    }
 }

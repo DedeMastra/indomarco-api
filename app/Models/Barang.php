@@ -18,4 +18,9 @@ class Barang extends Model
         'umur_barang',
         'satuan_barang'
     ];
+
+    public function Pemesanan()
+    {
+        return $this->hasMany('App\Models\Pemesanan');
+    }
 }

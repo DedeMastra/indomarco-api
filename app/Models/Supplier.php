@@ -15,4 +15,9 @@ class Supplier extends Model
         'nama_supplier',
         'no_supplier'
     ];
+
+    public function Pemesanan()
+    {
+        return $this->hasMany('App\Models\Pemesanan');
+    }
 }
