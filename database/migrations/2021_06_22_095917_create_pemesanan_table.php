@@ -17,8 +17,8 @@ class CreatePemesananTable extends Migration
             $table->increments('id');
             $table->integer('barang_id');
             $table->integer('supplier_id');
-            $table->foreign('kode_barang')->references('id')->on('barangs');
-            $table->foreign('kode_supplier')->references('id')->on('suppliers');
+            $table->foreign('barang_id')->references('id')->on('barangs');
+            $table->foreign('supplier_id')->references('id')->on('suppliers');
             $table->string('tanggal_pemesanan');
             $table->integer('jumlah_pemesanan');
             $table->timestamps();

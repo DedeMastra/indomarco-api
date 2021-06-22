@@ -31,8 +31,8 @@ class PemesananController extends Controller
     public function create(request $request)
     {
         $supplier = new Pemesanan;
-        $supplier->kode_barang = $request->kode_barang;
-        $supplier->kode_supplier = $request->kode_supplier;
+        $supplier->barang_id = $request->barang_id;
+        $supplier->supplier_id = $request->supplier_id;
         $supplier->tanggal_pemesanan = $request->tanggal_pemesanan;
         $supplier->jumlah_pemesanan = $request->jumlah_pemesanan;
         
@@ -44,8 +44,8 @@ class PemesananController extends Controller
     public function update(Request $request, $id)
     {
         $supplier = Pemesanan::find($id);
-        $supplier->kode_barang = $request->kode_barang;
-        $supplier->kode_supplier = $request->kode_supplier;
+        $supplier->barang_id = $request->barang_id;
+        $supplier->supplier_id = $request->supplier_id;
         $supplier->tanggal_pemesanan = $request->tanggal_pemesanan;
         $supplier->jumlah_pemesanan = $request->jumlah_pemesanan;
 
