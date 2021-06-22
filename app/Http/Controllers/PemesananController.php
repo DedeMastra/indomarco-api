@@ -26,9 +26,6 @@ class PemesananController extends Controller
     public function create(request $request)
     {
         $supplier = new Pemesanan;
-
-        dd($request->kode_barang);
-        
         $supplier->kode_barang = $request->kode_barang;
         $supplier->kode_supplier = $request->kode_supplier;
         $supplier->tanggal_pemesanan = $request->tanggal_pemesanan;
