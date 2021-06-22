@@ -15,6 +15,8 @@ class CreatePemesananTable extends Migration
     {
         Schema::create('pemesanans', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('kode_barang');
+            $table->integer('kode_supplier');
             $table->foreign('kode_barang')->references('id')->on('barangs');
             $table->foreign('kode_supplier')->references('id')->on('suppliers');
             $table->string('tanggal_pemesanan');
