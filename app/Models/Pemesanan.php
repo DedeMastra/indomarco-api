@@ -18,7 +18,7 @@ class Pemesanan extends Model
     //     'jumlah_pemesanan'
     // ];
 
-    protected $table = "pemesanan";
+    protected $table = "pemesanans";
 
     public function supplier()
     {

@@ -16,7 +16,7 @@ class Supplier extends Model
     //     'no_supplier'
     // ];
 
-    protected $table = "supplier";
+    protected $table = "suppliers";
 
     public function pemesanan()
     {

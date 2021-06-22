@@ -19,7 +19,7 @@ class Barang extends Model
     //     'satuan_barang'
     // ];
 
-    protected $table = "barang";
+    protected $table = "barangs";
 
     public function pemesanan()
     {
