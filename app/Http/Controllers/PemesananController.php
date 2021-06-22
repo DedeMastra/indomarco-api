@@ -14,9 +14,9 @@ class PemesananController extends Controller
         // dd(Barang::all()->last()->id);
         // $barang = Barang::all();
         // $supplier = Supplier::all();
-        echo Barang::all();
-        echo Supplier::all();
-        echo Pemesanan::where('Barang', 'Barang.id')->get();
+        // echo Barang::all();
+        // echo Supplier::all();
+        // echo Pemesanan::where('Barang', 'Barang.id')->get();
         echo Pemesanan::has('Barang.id')->get();
 
         return Pemesanan::with('Barang', 'Supplier')->get();
