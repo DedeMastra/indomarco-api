@@ -14,11 +14,11 @@ class CreatePemesananTable extends Migration
     public function up()
     {
         Schema::create('pemesanans', function (Blueprint $table) {
-            $table->increments('pemesanan_id');
+            $table->increments('id');
             $table->integer('kode_barang');
             $table->integer('kode_supplier');
-            $table->foreign('kode_barang')->references('barang_id')->on('barangs');
-            $table->foreign('kode_supplier')->references('supplier_id')->on('suppliers');
+            $table->foreign('kode_barang')->references('id')->on('barangs');
+            $table->foreign('kode_supplier')->references('id')->on('suppliers');
             $table->string('tanggal_pemesanan');
             $table->integer('jumlah_pemesanan');
             $table->timestamps();
