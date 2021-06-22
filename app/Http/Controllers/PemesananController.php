@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Pemesanan;
+use App\Models\Supplier;
+use App\Models\Barang;
 
 class PemesananController extends Controller
 {
     public function index()
     {
         // dd(Barang::all()->last()->id);
-        return Pemesanan::all();
+        // $barang = Barang::all();
+        // $supplier = Supplier::all();
+        return Pemesanan::with('Barang', 'Supplier')->get();
     }
     public function show($id)
     {
