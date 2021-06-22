@@ -9,7 +9,7 @@ class Pemesanan extends Model
 {
     use HasFactory;
     // Primary Key
-    public $primaryKey = 'id';
+    public $primaryKey = 'pemesanan_id';
     
     protected $fillable = [
         'kode_barang',
