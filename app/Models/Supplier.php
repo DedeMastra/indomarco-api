@@ -20,7 +20,7 @@ class Supplier extends Model
 
     public function pemesanan()
     {
-        // return $this->hasMany('App\Models\Pemesanan');
-        return $this->belongsTo('App\Models\Pemesanan');
+        return $this->hasMany('App\Models\Pemesanan');
+        // return $this->belongsTo('App\Models\Pemesanan');
     }
 }
