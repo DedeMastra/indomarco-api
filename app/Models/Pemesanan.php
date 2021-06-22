@@ -22,11 +22,13 @@ class Pemesanan extends Model
 
     public function supplier()
     {
-        return $this->belongsTo('App\Models\Supplier');
+        // return $this->belongsTo('App\Models\Supplier');
+        return $this->hasOne('App\Models\Supplier');
     }
 
     public function barang()
     {
-        return $this->belongsTo('App\Models\Barang');
+        // return $this->belongsTo('App\Models\Barang');
+        return $this->hasOne('App\Models\Barang');
     }
 }
