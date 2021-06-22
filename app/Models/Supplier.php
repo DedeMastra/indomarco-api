@@ -9,14 +9,16 @@ class Supplier extends Model
 {
     use HasFactory;
     // Primary Key
-    public $primaryKey = 'supplier_id';
+    // public $primaryKey = 'supplier_id';
     
-    protected $fillable = [
-        'nama_supplier',
-        'no_supplier'
-    ];
+    // protected $fillable = [
+    //     'nama_supplier',
+    //     'no_supplier'
+    // ];
 
-    public function Pemesanan()
+    protected $table = "supplier";
+
+    public function pemesanan()
     {
         return $this->hasMany('App\Models\Pemesanan');
     }

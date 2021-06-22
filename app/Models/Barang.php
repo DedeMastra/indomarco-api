@@ -9,17 +9,19 @@ class Barang extends Model
 {
     use HasFactory;
     // Primary Key
-    public $primaryKey = 'barang_id';
+    // public $primaryKey = 'barang_id';
     
-    protected $fillable = [
-        'nama_barang',
-        'stok_barang',
-        'harga_barang',
-        'umur_barang',
-        'satuan_barang'
-    ];
+    // protected $fillable = [
+    //     'nama_barang',
+    //     'stok_barang',
+    //     'harga_barang',
+    //     'umur_barang',
+    //     'satuan_barang'
+    // ];
 
-    public function Pemesanan()
+    protected $table = "barang";
+
+    public function pemesanan()
     {
         return $this->hasMany('App\Models\Pemesanan');
     }

@@ -9,21 +9,23 @@ class Pemesanan extends Model
 {
     use HasFactory;
     // Primary Key
-    public $primaryKey = 'pemesanan_id';
+    // public $primaryKey = 'pemesanan_id';
     
-    protected $fillable = [
-        'kode_barang',
-        'kode_supplier',
-        'tanggal_pemesanan',
-        'jumlah_pemesanan'
-    ];
+    // protected $fillable = [
+    //     'kode_barang',
+    //     'kode_supplier',
+    //     'tanggal_pemesanan',
+    //     'jumlah_pemesanan'
+    // ];
 
-    public function Supplier()
+    protected $table = "pemesanan";
+
+    public function supplier()
     {
         return $this->belongsTo('App\Models\Supplier');
     }
 
-    public function Barang()
+    public function barang()
     {
         return $this->belongsTo('App\Models\Barang');
     }
